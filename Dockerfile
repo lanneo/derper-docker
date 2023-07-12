@@ -1,4 +1,4 @@
-FROM golang:latest AS builder
+FROM golang:alpine AS builder
 WORKDIR /app
 
 # https://tailscale.com/kb/1118/custom-derp-servers/
