@@ -9,9 +9,10 @@ WORKDIR /app
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends apt-utils && \
-    apt-get install -y ca-certificates && \
+RUN apk update && \
+    apk add --no-cache build-base && \
+    apk add --no-cache alpine-sdk && \
+    apk add --no-cache ca-certificates && \
     mkdir /app/certs
 
 ENV DERP_DOMAIN your-hostname.com
