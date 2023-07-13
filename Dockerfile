@@ -11,7 +11,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apk update && \
     apk add --no-cache build-base && \
-    apk add --no-cache alpine-sdk && \
     apk add --no-cache ca-certificates && \
     mkdir /app/certs
 
