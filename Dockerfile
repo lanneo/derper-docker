@@ -12,6 +12,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apk update && \
     apk add --no-cache build-base && \
     apk add --no-cache ca-certificates && \
+    rm -rf /var/cache/apk/* && \
     mkdir /app/certs
 
 ENV DERP_DOMAIN your-hostname.com
